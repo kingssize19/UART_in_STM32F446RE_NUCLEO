@@ -61,7 +61,7 @@ USART_Cmd(USART2, ENABLE);
 * **USART_Init :** USART2  yapılandırmasını tamamlar.
 * **USART_Cmd  :** USART2 modülü aktif eder.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 3. Karakter Dizisini USART ile Gönderme (usart_puts Fonksiyonu)
 
@@ -79,7 +79,9 @@ void usart_puts(USART_TypeDef* USARTx, volatile char *str)
 * **while (\*str)                      :** String'in sonuna (null karaktere) ulaşana kadar döner.
 * **while (!(USARTx->SR & 0x00000040)) :** TXE (Transmit Data Register Empty) biti 1 olana kadar bekler. Bu, veri gönderilmeye hazır olduğunu gösterir.
 * **USART_SendData                     :** USART üzerinden bir byte veri gönderir.
-* ***\str++                            :** String'in bir sonraki karakterine geçer.  
+* **\*str++                            :** String'in bir sonraki karakterine geçer.  
+
+
 
 
 
